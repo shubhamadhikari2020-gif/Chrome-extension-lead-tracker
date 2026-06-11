@@ -7,7 +7,11 @@ inputBtn.addEventListener("click", function() {
   myLeads.push(inputEl.value); // Pushes input values into myLeads array
   //wrapping the lead in an anchor tag (<a>) inside <li>
   // so that the link open the link
-  ulEl.innerHTML += `<li><a tagret='_blank' href='${inputEl.value}'>${inputEl.value} </a></li>`;
+  ulEl.innerHTML += `<li>
+                        <a tagret='_blank' href='${inputEl.value}'>
+                            ${inputEl.value} 
+                       </a>
+                     </li>`;
   inputEl.value=""
 })
 
