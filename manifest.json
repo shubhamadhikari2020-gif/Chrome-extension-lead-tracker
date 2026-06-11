@@ -3,6 +3,6 @@
   "version": "1.1",
   "name": "Leads tracker",
   "action":{
-    "default_popup":"extension.html",
+    "default_popup":"extension.html"
   }
 }
