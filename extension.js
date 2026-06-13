@@ -2,15 +2,23 @@ let myLeads = [];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
+const deleteBtn = document.getElementById("delete-btn");
 
 // 1. PERSISTENCE ON REFRESH: Fetch saved leads from localStorage when the page loads
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+console.log(leadsFromLocalStorage)
 
 // 2. If there are leads in storage, restore them back into our array and display them
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage;
     renderLeads();
 }
+
+deleteBtn.addEventListener("dblclick",function(){
+    localStorage.clear()
+    myLeads=[]
+    renderLeads()
+})
 
 inputBtn.addEventListener("click", function() {
     // 3. Push the new input value into the array
